@@ -21,14 +21,14 @@ const ponsel = [
         "storage":""
     },
     {
-        "nama":"Oppo",
+        "nama":"Vivo",
         "gambar":"-",
         "harga":"2,000",
         "ram":"3GB",
         "storage":""
     },
     {
-        "nama":"Oppo",
+        "nama":"Lenovo",
         "gambar":"-",
         "harga":"2,000",
         "ram":"3GB",

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Toko Online Sneakers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <marquee class="marquee" behavior="" direction="">Toko Sneakers Terhebat Terkece Terkeren di Indonesia</marquee>
+ <style>
+     body{
+         background-image: url(asset/img/background.jpg)
+     }
+     .marquee{
+       font-size: 40px;
+       animation-name:gantiwarna;
+       animation-duration: 5s;
+       animation-iteration-count: infinite; 
+         
+     }
+     @keyframes gantiwarna{
+    0%{background-color:aquamarine;left: 0px;top: 0px;}
+    25%{background-color: salmon;left: 200px;top: 0px;}
+    50%{background-color: rgb(127, 243, 127);left: 200px;top: 200px;}
+    75%{background-color: cyan;left: 200px;top: 200px;}
+    100%{background-color:magenta;left: 0px;top: 0px;}
+     }
+     #item-list{
+         display: flex;
+         flex-wrap: wrap;
+         padding: 20px;
+
+     }
+     .item{
+         flex: 1;
+         margin: 14px;
+         text-align: center;
+         background: rgb(241, 241, 241);
+         box-shadow: 5px 5px 3px 3px rgb(231, 58, 58);
+         padding: 10px;
+         border: 3px solid rgb(231, 58, 58);
+         border-radius:20px;
+         border-color: black;
+     }
+     .item .gambar img{
+         width: 150px;
+         margin: 15px;
+         border: 2px solid blue;
+         border-radius: 20px;
+         transition: width 2s, height 2s;
+     }
+     .item:hover{
+          background-color: rgb(37, 236, 30);
+     }
+     .item .gambar img:hover{
+         width: 300px;
+         height: 300px;
+     }
+
+     
+ </style>
+</head>
+<body> 
+    <div id="item-list"></div>
+    <script>
+    let item = [
+        {
+            "nama":"Adidas Yeezy Boost 350 V2 Static",
+             "ukuran":"41",
+             "gambar":"asset/img/1.jpg",
+             "warna":"White-gray",
+             "harga":"Rp. 1.200.000"
+        },
+        {
+            "nama":"Balenciaga",
+             "ukuran":"42",
+             "gambar":"asset/img/2.jpg",
+             "warna":"white-black",
+             "harga":"Rp. 1.900.000"
+        }, {
+            "nama":"Adidas Yeezy Boost 350 V2 clay",
+             "ukuran":"40",
+             "gambar":"asset/img/3.jpg",
+             "warna":"brown",
+             "harga":"Rp. 1.300.000"
+        }, {
+            "nama":"Reid Sneakers Full Grain Leather",
+             "ukuran":"44",
+             "gambar":"asset/img/4.jpg",
+             "warna":"White",
+             "harga":"Rp. 1.500.000"
+        }, {
+            "nama":"Fashion Men Sneakers Running",
+             "ukuran":"41",
+             "gambar":"asset/img/5.jpg",
+             "warna":"White-black",
+             "harga":"Rp. 1.900.000"
+        }, {
+            "nama":"Adidas Burgundy VL COURT Sneakers",
+             "ukuran":"43",
+             "gambar":"asset/img/6.jpg",
+             "warna":"red",
+             "harga":"Rp. 1.400.000"
+        }, {
+            "nama":"Suede Classic Women Sneakers",
+             "ukuran":"44",
+             "gambar":"asset/img/7.jpg",
+             "warna":"White-black",
+             "harga":"Rp. 1.500.000"
+        }, {
+            "nama":"W20 leather urban Sneakers in leather",
+             "ukuran":"42",
+             "gambar":"asset/img/8.jpg",
+             "warna":"White-gray",
+             "harga":"Rp. 1.200.000"
+        }, {
+            "nama":"Urbanart kwesta Bolt1 Lace Up Sneakers",
+             "ukuran":"40",
+             "gambar":"asset/img/9.jpg",
+             "warna":"black",
+             "harga":"Rp. 700.000"
+        }, {
+            "nama":"D-SNEAKERZ Men's Blue Casual Synthetic Leather Sneakers ",
+             "ukuran":"39",
+             "gambar":"asset/img/10.jpg",
+             "warna":"blue casual",
+             "harga":"Rp. 1.300.000"
+        }, {
+            "nama":"Men's Wildcard leather sneakers",
+             "ukuran":"42",
+             "gambar":"asset/img/11.jpg",
+             "warna":"White",
+             "harga":"Rp. 2.000.000"
+        }, {
+            "nama":"D-SNEAKERZ Men's Blue Casual Synthetic Leather Sneakers ",
+             "ukuran":"40",
+             "gambar":"asset/img/12.jpg",
+             "warna":"Black-White",
+             "harga":"Rp. 1.700.000"
+        }, {
+            "nama":"Sorrento Sneakers",
+             "ukuran":"40",
+             "gambar":"asset/img/13.jpg",
+             "warna":"White-black",
+             "harga":"Rp. 1.800.000"
+        }, {
+            "nama":"Vikky Women's Sneakers, QUIET SHADE-Puma White, large",
+             "ukuran":"44",
+             "gambar":"asset/img/14.jpg",
+             "warna":"Puma-White",
+             "harga":"Rp. 1.900.000"
+        }, {
+            "nama":"SAUCONY JAZZ O' RAINBOW ",
+             "ukuran":"40",
+             "gambar":"asset/img/15.jpg",
+             "warna":"Charcoal-Purple",
+             "harga":"Rp. 1.100.000"
+        }, {
+            "nama":"Sneakers Led",
+             "ukuran":"40",
+             "gambar":"asset/img/16.jpg",
+             "warna":"Light-Black",
+             "harga":"Rp. 1.400.000"
+        }, {
+            "nama":"Viuuu Sneakers",
+             "ukuran":"42",
+             "gambar":"asset/img/17.jpeg",
+             "warna":"Blue-Casual",
+             "harga":"Rp. 1.200.000"
+        }, {
+            "nama":"Jodi Low Rise Sneaker 1",
+             "ukuran":"43",
+             "gambar":"asset/img/18.jpg",
+             "warna":"White-Bright",
+             "harga":"Rp. 1.800.000"
+        }, {
+            "nama":"sneaker with rhinestones",
+             "ukuran":"42",
+             "gambar":"asset/img/19.jpg",
+             "warna":"gray",
+             "harga":"Rp. 2.200.000"
+        }, {
+            "nama":"Balenciaga Sneakers",
+             "ukuran":"40",
+             "gambar":"asset/img/20.jpg",
+             "warna":"Black",
+             "harga":"Rp. 1.500.000"
+        },
+    ];
+    for(x in item){
+        let namaItem = item[x].nama;
+        let ukuranItem = item[x].ukuran;
+        let gambarItem = item[x].gambar;
+        let warnaItem = item[x].warna;
+        let hargaItem = item[x].harga;
+
+        document.getElementById('item-list').innerHTML+="\
+        <div class='item'>\
+        <div class='gambar'><img src='"+gambarItem+"' alt=''/></div>\
+        <div class='nama'>"+namaItem+"</div>\
+        <div class='harga'>"+hargaItem+"</div>\
+        <div class='warna'>"+warnaItem+"</div>\
+        <div class='ukuran'>"+ukuranItem+"</div>\
+        ";
+        if(((x+1)/5)===0){
+        document.getElementById(item-list).innerHTML+="\
+        <div class='pemisah'></div>\
+        ";
+        }
+    }
+    </script>
+    
+</body>
+</html>
