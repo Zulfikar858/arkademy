@@ -1,0 +1,60 @@
+<html>
+    <head><title>
+    </title>
+    <link rel="stylesheet" href="kalkulator.css">
+</head>
+<body>
+    <div class="input-tambah">
+    <input id="angka1"></br>
+    <input id="angka2"></br>
+    <p id="hasilpertambahan"></p>
+    <button onclick="hasil1()">tambah</button>
+   
+    </div>  
+     <div class="input-kali">
+        <input id="kali1"></br>
+        <input id="kali2"></br>
+        <p id="hasilperkalian"></p>
+        <button onclick="hasil2()">kali</button>
+        </div>
+
+        <div class="input-bagi">
+            <input id="bagi1"></br>
+            <input id="bagi2"></br>
+            <p id="hasilpembagian"></p>
+            <button onclick="hasil3()">bagi</button>
+            </div>    
+    <script>
+        // HASIL PERTAMBAHAN
+
+
+       function hasil1(){
+           var angka1 = parseInt (document.getElementById('angka1').value)
+           var angka2 = parseInt (document.getElementById('angka2').value)
+           var hasilpertambahan = angka1 + angka2;
+        document.getElementById('hasilpertambahan').innerHTML = hasilpertambahan;
+       }
+
+
+    // HASIL PERKALIAN
+
+
+
+    function hasil2() {
+        var kali1 = parseInt (document.getElementById('kali1').value)
+            var kali2 = parseInt (document.getElementById('kali2').value)
+            var hasilperkalian = kali1*kali2;
+            document.getElementById('hasilperkalian').innerHTML = hasilperkalian;
+        
+    }
+    function hasil3() {
+        var bagi1 = parseInt (document.getElementById('bagi1').value)
+            var bagi2 = parseInt (document.getElementById('bagi2').value)
+            var hasilpembagian = bagi1/bagi2;
+            document.getElementById('hasilpembagian').innerHTML = hasilpembagian;
+    }
+
+    </script>
+
+</body>
+</html>
