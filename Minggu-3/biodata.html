@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <title>Biodata</title>
+ <link rel="stylesheet" href="biodata.css"/>
+ </head>
+ <body bgcolor="limegreen">
+     
+     <div id="biodata">
+ <form action="#" style="width:auto"class="posisi";>
+ <fieldset class="h">
+ <table style="width: 250px;">
+ <tr>
+ <td rowspan="15" width="10px">
+ <img src="WhatsApp Image 2019-07-29 at 11.20.42 AM.jpeg" width="250px" height="420px"/>
+ </td>
+ </tr>
+<div id="nama"><h2>Nama</h2></div>
+<div id="kelas"><h2>Kelas</h2></div>
+<div id="sekolah"><h2>Sekolah</h2></div>
+<div id="nohp"><h2>noHP</h2></div>
+<div id="umur"><h2>umur</h2></div>
+ </fieldset>
+ </form>
+</div>
+<script>
+   let data  ={
+       nama:"Achmad Zulfikar Rahman",
+       kelas:"XI-RPL-1",
+       sekolah:"SMK Jakarta Pusat 1",
+       noHP :"081295493046",
+       umur :"16 tahun"
+
+   }
+     let nama = document.getElementById('nama');
+     let kelas = document.getElementById('kelas');
+     let sekolah = document.getElementById('sekolah');
+     let noHP = document.getElementById('nohp');
+     let umur = document.getElementById('umur');
+
+
+
+     nama.innerHTML = data.nama
+    kelas.innerHTML = data.kelas
+    sekolah.innerHTML = data.sekolah
+    noHP.innerHTML = data.noHP
+    umur.innerHTML = data.umur
+</script>
+ </body>
+ </html>
