@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="hitung"></div>
+    <div id="kali"></div>
+    <div id="bagi"></div>
+    <div id="kurang"></div>
+    <script>
+        class OperasiHitung{
+            pertambahan(a,b){
+        
+                return a+b 
+            }
+            perkalian(a,b){
+                return a*b
+            }
+            pembagian(a,b){
+                return a/b 
+            }
+             pengurangan(a,b){
+
+                return a-b
+             }
+
+            }
+              const OH = new OperasiHitung()        
+         document.getElementById("hitung").innerHTML = OH.pertambahan(2,9);
+         document.getElementById("kali").innerHTML = OH.perkalian(2,6);
+         document.getElementById("bagi").innerHTML = OH.pembagian(2,20);
+         document.getElementById("kurang").innerHTML = OH.pengurangan(2,10);
+
+         
+        </script>
+    
+</body>
+</html>
