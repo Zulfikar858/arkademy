@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Kalkulator</title>
     <style>
         .calc{
-            width: 300px;
-            background: blue;
+            width: 500px;
+            background: lawngreen;
         }
         .nav{
             display: flex;
             flex-direction: row;
             padding: 10px;
+            position: relative;
         }
         .title{
             flex: 1;
             text-align: center;
+            align-self:  center;
+        }
+
+        .title div{
+            display: inline-block;
+        }
+        .control{
+            position: absolute;
+            display: flex;
+            flex-direction: row;
         }
         .close, .minimize, .maximize, .Menu{
             padding: 5px;
@@ -29,16 +40,22 @@
             background: black;
             color: white;
         }
+        .Menu{
+            position:absolute;
+            right: 0;
+            
+        }
         .display{
             height: 50px;
             background: white;
             margin: 5px;
+            font-size: 30px;
         }
         .input{
             display: flex;
             flex-direction: column;
             flex: 1;
-            background: rgb(0, 255, 0);
+            background:cyan;
         }
         .wrapper{
             display: block;
@@ -55,8 +72,12 @@
            background: grey; 
            padding-top: 10px;
            padding-bottom: 10px;
-           border-radius: 3px;   
+           border-radius: 15px; 
+           color: aliceblue;  
     
+        }
+        .square:hover{
+          cursor: pointer;
         }
     
     </style>
@@ -64,53 +85,57 @@
 <body>
     <div class="calc">
         <div class="nav">
-            <div class="close">X</div>
+          <div class="control">
+                <div class="close">X</div>
             <div class="minimize">-</div>
             <div class="maximize">O</div>
-            <div class="title">Basic Mode</div>
+          </div>
+            <div class="title">
+                <div>Basic Mode</div>
+            </div>
             <div class="Menu">M</div>
 
         </div>
-        <div class="display"></div>
+        <div id="hasil" class="display"></div>
         <div class="input">
             
          <div class="wrapper">
                 <div class="row">
-                        <div class="square">7</div>
-                        <div class="square">8</div>
-                        <div class="square">9</div>
+                        <div class="square"onclick="calculator.tombol(7)">7</div>
+                        <div class="square"onclick="calculator.tombol(8)">8</div>
+                        <div class="square"onclick="calculator.tombol(9)">9</div>
         
                     </div>
                     <div class="wrapper">
                             <div class="row">
-                                    <div class="square">4</div>
-                                    <div class="square">5</div>
-                                    <div class="square">6</div>
+                                    <div class="square"onclick="calculator.tombol(4)">4</div>
+                                    <div class="square"onclick="calculator.tombol(5)">5</div>
+                                    <div class="square"onclick="calculator.tombol(6)">6</div>
                     
                                 </div> <div class="wrapper">
                                         <div class="row">
-                                                <div class="square">1</div>
-                                                <div class="square">2</div>
-                                                <div class="square">3</div>
+                                                <div class="square" onclick="calculator.tombol(1)">1</div>
+                                                <div class="square"onclick="calculator.tombol(2)">2</div>
+                                                <div class="square"onclick="calculator.tombol(3)">3</div>
                                 
                                             </div>
                                             <div class="wrapper">
                                                     <div class="row">
-                                                            <div class="square">0</div>
-                                                            <div class="square">/</div>
-                                                            <div class="square">C</div>
+                                                            <div class="square"onclick="calculator.tombol(0)">0</div>
+                                                            <div class="square"onclick="calculator.tombol('/')">/</div>
+                                                            <div class="square" onclick="calculator.hapus()">C</div>
                                             
                                                         </div>
                                             <div class="wrapper">
                                                     <div class="row">
-                                                            <div class="square">+</div>
-                                                            <div class="square">*</div>
-                                                            <div class="square">-</div>
+                                                            <div class="square" onclick="calculator.tombol('+')">+</div>
+                                                            <div class="square"onclick="calculator.tombol('-')">-</div>
+                                                            <div class="square"onclick="calculator.tombol('*')">*</div>
                                             
                                                         </div>
                                                         <div class="wrapper">
                                                     <div class="row">
-                                                            <div class="square">=</div>
+                                                            <div class="square" onclick="calculator.hitung()">=</div>
                                             
                                                         </div>
 
@@ -121,6 +146,27 @@
          </div>
         </div>
     </div>
+
+    <script>
+    class Kalkulator{
+        tombol(nama){
+            document.getElementById('hasil').innerHTML +=nama.toString()
+        }
+        hitung(){
+           const display = document.getElementById('hasil')
+            const hasil = eval(display.innerHTML)
+            display.innerHTML = hasil
+        }
+        hapus(){
+            document.getElementById('hasil').innerHTML = ''
+        }
+    }
+    
+
+    const calculator = new Kalkulator()
+
+
+    </script>
     
 </body>
 </html>
