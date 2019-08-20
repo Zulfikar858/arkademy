@@ -72,7 +72,7 @@
            background: grey; 
            padding-top: 10px;
            padding-bottom: 10px;
-           border-radius: 15px; 
+           border-radius: 20px; 
            color: aliceblue;  
     
         }
@@ -136,6 +136,7 @@
                                                         <div class="wrapper">
                                                     <div class="row">
                                                             <div class="square" onclick="calculator.hitung()">=</div>
+                                                            <div class="square" onclick="calculator.ubahDesimal()">.</div>
                                             
                                                         </div>
 
@@ -156,6 +157,10 @@
            const display = document.getElementById('hasil')
             const hasil = eval(display.innerHTML)
             display.innerHTML = hasil
+        }
+
+        ubahDesimal(){
+            document.getElementById('hasil').innerHTML += '.'
         }
         hapus(){
             document.getElementById('hasil').innerHTML = ''
